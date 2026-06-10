@@ -1,81 +1,42 @@
-# Multi-Class Skin Cancer Detection & Localization using Deep Learning
+# Comprehensive AI Pipeline for Skin Lesion Classification, Localization, and Interpretability
 
-## 📌 Project Overview
-This project focuses on building an AI-based system that detects and classifies different types of skin lesions from medical images.  
-The system performs both **classification** and **localization**, helping highlight potentially affected skin regions automatically.
-
-The goal of this project is not to replace medical diagnosis, but to explore how deep learning can assist in early awareness and analysis of skin cancer risks.
+An advanced, production-grade Deep Learning system that combines multi-class computer vision classification, real-time object detection, and explainable AI (XAI) for dermatological clinical support.
 
 ---
 
-## 🚀 Features
-- Image preprocessing (normalization, contrast enhancement, noise removal)
-- Multi-class classification of skin lesions:
-  - Melanoma
-  - Basal Cell Carcinoma (BCC)
-  - Squamous Cell Carcinoma (SCC)
-  - Benign lesions
-- Lesion localization using object detection techniques
-- Model evaluation using:
-  - Accuracy
-  - Precision & Recall
-  - F1-Score
-  - IoU (Intersection over Union)
-- Visualization using Grad-CAM for interpretability
+## 🚀 System Architecture & Capabilities
+
+This pipeline integrates three cutting-edge AI methodologies into a singular inferencing engine:
+
+1. **Multi-Class Classification (MobileNetV2):** Fine-tuned via Transfer Learning on the HAM10000 dataset to classify lesions into major diagnostic categories with an optimized lightweight parameter footprint.
+2. **Lesion Localization (YOLOv5):** Integrated real-time object detection architecture to automatically draw precise bounding boxes around localized affected skin areas.
+3. **Explainable AI (Grad-CAM):** Generates diagnostic visual heatmaps overlaying the original image, highlighting the exact pixel regions the neural network prioritized during classification to maintain clinical trust.
 
 ---
 
-## 🛠 Technologies Used
-- Python
-- TensorFlow / Keras
-- OpenCV
-- Scikit-learn
-- Jupyter Notebook / Google Colab
+## 🖥️ Interactive Gradio Web Interface
+
+The system features a live web dashboard built with **Gradio** for seamless end-to-end user evaluation.
+
+* **Inputs:** Single-frame dermoscopic skin image uploads (Numpy array ingestion).
+* **Outputs:** 
+  * 📝 Textbox: Diagnostic label prediction alongside model confidence parameters.
+  * 🎯 Visual Box 1: YOLO localized bounding box output.
+  * 🔬 Visual Box 2: Grad-CAM attention heatmap visualization.
 
 ---
 
-## 📂 Dataset
-The model was trained using publicly available dermoscopic image datasets:
+## ⚙️ Local Deployment & Execution
 
-- ISIC Archive
-- HAM10000 dataset
+To clone and run this advanced diagnostic interface locally, execute the following block:
 
-These datasets contain labeled dermoscopic images used for training and evaluating lesion classification models.
+```bash
+# Clone the repository
+git clone [https://github.com/Sobia122/Skin-Cancer-Detection-Deep-Learning.git](https://github.com/Sobia122/Skin-Cancer-Detection-Deep-Learning.git)
+cd Skin-Cancer-Detection-Deep-Learning
 
----
+# Install required framework dependencies
+pip install -r requirements.txt
 
-## 🧠 My Contribution
-In this project, I worked on:
-
-- Preparing and preprocessing medical image datasets
-- Training CNN-based classification models
-- Testing prediction performance
-- Visualizing results and interpreting model outputs
-- Running experiments in Google Colab environment
-
----
-
-## 📊 Learning Outcomes
-Through this project, I gained hands-on experience in:
-
-- End-to-end deep learning workflow
-- Medical image preprocessing
-- Model training and evaluation
-- Understanding real-world AI application challenges
-
----
-
-## ⚠ Disclaimer
-This project is for educational and research purposes only.  
-It is **not intended for medical diagnosis or clinical use**.
-
----
-
-## 👩‍💻 Author
-**Sobia Liaqat**  
-Aspiring Software & AI Developer  
-
-Portfolio:  
-https://sobia122.github.io/Sobia-Liaqat-portfolio/
-
----
+# Execute the integrated Python script / Notebook pipeline
+# The interface will spin up locally and generate a public shareable Gradio link.
